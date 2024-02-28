@@ -4,6 +4,7 @@ import {createApp} from 'vue'
 import App from './App.vue'
 import * as VueRouter from 'vue-router';
 import routes from "./config/route";
+// todo sz※ 此处是否为全局引入 ，不是按需引入
 import Vant from 'vant';
 import 'vant/lib/index.css';
 import '../global.css'
@@ -12,7 +13,7 @@ import '../global.css'
 const app = createApp(App);
 app.use(Vant);
 
-// 安装vant框架
+// 路由插件？
 const router = VueRouter.createRouter({
     // 内部提供了 history 模式的实现。为了简单起见，我们在这里使用 hash 模式。
     history: VueRouter.createWebHistory(),

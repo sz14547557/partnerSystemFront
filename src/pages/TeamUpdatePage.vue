@@ -67,7 +67,7 @@
 import {useRoute, useRouter} from "vue-router";
 import {onMounted, ref} from "vue";
 import myAxios from "../plugins/myAxios";
-import {Toast} from "vant";
+//import {Toast} from "vant";
 
 const router = useRouter();
 const route = useRoute();

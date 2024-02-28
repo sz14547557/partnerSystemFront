@@ -4,9 +4,12 @@ import vue from '@vitejs/plugin-vue'
 // 引入插件
 import styleImport, {VantResolve} from 'vite-plugin-style-import';
 
-// https://vitejs.dev/config/  引入vant框架，也可以引入AndDesignVue
+// https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [vue(), styleImport({
+    plugins: [
+        vue(),
+        styleImport({
         resolves: [VantResolve()],
     }),]
 })
+

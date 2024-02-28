@@ -7,7 +7,7 @@
 import {onMounted, ref} from 'vue';
 import {useRoute} from "vue-router";
 import myAxios from "../plugins/myAxios";
-import {Toast} from "vant";
+//import {Toast} from "vant";
 import qs from 'qs';
 import UserCardList from "../components/UserCardList.vue";
 
@@ -31,7 +31,7 @@ onMounted(async () => {
       })
       .catch(function (error) {
         console.error('/user/search/tags error', error);
-        Toast.fail('请求失败');
+        // Toast.fail('请求失败');
       })
   console.log(userListData)
   if (userListData) {

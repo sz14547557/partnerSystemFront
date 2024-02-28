@@ -18,7 +18,7 @@ import {useRouter} from "vue-router";
 import TeamCardList from "../components/TeamCardList.vue";
 import {onMounted, ref} from "vue";
 import myAxios from "../plugins/myAxios";
-import {Toast} from "vant";
+// //import {Toast} from "vant";
 
 const active = ref('public')
 const router = useRouter();
@@ -64,7 +64,8 @@ const listTeam = async (val = '', status = 0) => {
   if (res?.code === 0) {
     teamList.value = res.data;
   } else {
-    Toast.fail('加载队伍失败，请刷新重试');
+    // Toast.fail('加载队伍失败，请刷新重试');
+    Toast('加载队伍失败，请刷新重试');
   }
 }
 
