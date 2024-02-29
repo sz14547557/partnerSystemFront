@@ -17,13 +17,13 @@
 
 <!--  指定一个插槽-->
   <div id="content">
-    <!-- 路由匹配到的组件将渲染在这里 -->
+    <!-- todo sz※ 根据不同的页面展示不同的内容，路由匹配到的组件将渲染在这里 -->
     <router-view/>
   </div>
 
 <!--  引入底部tabbar -->
   <van-tabbar route @change="onChange">
-<!--  【name参数】为标识符   【to参数】用于点击时跳转到不同的地址-->
+<!--  【name参数】为标识符   【to参数】用于点击时通过vue-router组件跳转到不同的地址-->
     <van-tabbar-item to="/" icon="home-o" name="index">主页</van-tabbar-item>
     <van-tabbar-item to="/team" icon="search" name="team">队伍</van-tabbar-item>
     <van-tabbar-item to="/user" icon="friends-o" name="user">个人</van-tabbar-item>

@@ -2,6 +2,7 @@ import axios, {AxiosInstance} from "axios";
 
 const isDev = process.env.NODE_ENV === 'development';
 
+// todo sz※ 后端请求地址
 const myAxios: AxiosInstance = axios.create({
     baseURL: isDev ? 'http://localhost:8080/api' : '线上地址',
 });
