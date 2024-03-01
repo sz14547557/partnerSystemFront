@@ -1,3 +1,5 @@
+<!--todo sz※ 用户信息页 使用cell组件进行用户信息展示-->
+
 <template>
   <template v-if="user">
     <van-cell title="当前用户" :value="user?.username" />

@@ -1,4 +1,3 @@
-// todo sz※ 整合后端路由 定义一些路由，根据路由地址不同跳转到不同的后端界面。需要安装vue-router组件
 import Index from "../pages/Index.vue";
 import Team from "../pages/TeamPage.vue";
 import UserPage from "../pages/UserPage.vue";
@@ -13,7 +12,7 @@ import TeamAddPage from "../pages/TeamAddPage.vue";
 import TeamUpdatePage from "../pages/TeamUpdatePage.vue";
 import TeamPage from "../pages/TeamPage.vue";
 
-// 将前端路径与后端路径通过路由匹配
+// todo sz※将【前端路径】与【前端组件界面】进行匹配，【前端组件页面】中定义了【后端项目接口地址】
 const routes = [
     { path: '/', component: Index },
     { path: '/team', title: '找队伍', component: TeamPage },

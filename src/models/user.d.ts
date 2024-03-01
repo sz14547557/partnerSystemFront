@@ -1,5 +1,5 @@
 /**
- * 用户类别
+ * 定义用户类型   用户类别
  */
 export type UserType = {
     id: number;
