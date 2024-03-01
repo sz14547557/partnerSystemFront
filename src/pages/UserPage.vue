@@ -11,7 +11,7 @@
 import {useRouter} from "vue-router";
 import {onMounted, ref} from "vue";
 import myAxios from "../plugins/myAxios";
-//import {Toast} from "vant";
+import {Toast} from "vant";
 import {getCurrentUser} from "../services/user";
 
 // const user = {
@@ -35,6 +35,7 @@ onMounted(async () => {
 })
 
 const toEdit = (editKey: string, editName: string, currentValue: string) => {
+  Toast("测试消息提示");
   router.push({
     path: '/user/edit',
     query: {

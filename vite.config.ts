@@ -5,11 +5,25 @@ import vue from '@vitejs/plugin-vue'
 import styleImport, {VantResolve} from 'vite-plugin-style-import';
 
 // https://vitejs.dev/config/
+
+// todo sz※ 解决Toast组件路径错误导致的报错问题
+//  libs:[{
+//                 libraryName: 'vant',
+//             esModule:true,
+//             resolveStyle: name => `../es/${name}/style`
+//
+//         }]
 export default defineConfig({
     plugins: [
         vue(),
         styleImport({
         resolves: [VantResolve()],
+        libs:[{
+                libraryName: 'vant',
+            esModule:true,
+            resolveStyle: name => `../es/${name}/style`
+
+        }]
     }),]
 })
 

@@ -11,11 +11,12 @@ import UserEditPage from "../pages/UserEditPage.vue";
 import UserLoginPage from "../pages/UserLoginPage.vue";
 import TeamAddPage from "../pages/TeamAddPage.vue";
 import TeamUpdatePage from "../pages/TeamUpdatePage.vue";
+import TeamPage from "../pages/TeamPage.vue";
 
 // 将前端路径与后端路径通过路由匹配
 const routes = [
     { path: '/', component: Index },
-    { path: '/team', title: '找队伍', component: Team },
+    { path: '/team', title: '找队伍', component: TeamPage },
     { path: '/team/add', title: '创建队伍', component: TeamAddPage },
     { path: '/team/update', title: '更新队伍', component: TeamUpdatePage },
     { path: '/user', title: '个人信息', component: UserPage },

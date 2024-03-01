@@ -1,3 +1,4 @@
+<!--使用编程式导航 onSearch 点击搜索时要触发的事件，onCancel 点击取消时要触发的事件-->
 <template>
   <form action="/">
     <van-search
@@ -30,8 +31,10 @@
 
 <script setup lang="ts">
 import {ref} from 'vue';
+// 引用useRouter
 import {useRouter} from "vue-router";
 
+// 定义router路由
 const router = useRouter()
 
 const searchText = ref('');
@@ -72,6 +75,11 @@ const onSearch = (val) => {
   });
 
 }
+
+/**
+ * 取消
+ * @param val
+ */
 const onCancel = () => {
   searchText.value = '';
   tagList.value = originTagList;
@@ -89,9 +97,10 @@ const doClose = (tag) => {
 }
 
 /**
- * 执行搜索
+ * 执行搜索 定义搜索Url
  */
 const doSearchResult = () => {
+  //todo sz※  使用router.push 进行页面跳转，具体的路由地址定义在config/route.ts中
   router.push({
     path: '/user/list',
     query: {
