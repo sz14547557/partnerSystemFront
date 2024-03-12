@@ -1,3 +1,4 @@
+// 统一定义一个获取当前登录用户信息的方法
 import myAxios from "../plugins/myAxios";
 import { setCurrentUserState } from "../states/user";
 
