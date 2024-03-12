@@ -7,11 +7,11 @@ const myAxios: AxiosInstance = axios.create({
     baseURL: isDev ? 'http://localhost:8080/api' : '线上地址',
 });
 
-myAxios.defaults.withCredentials = true; // 配置为true
+myAxios.defaults.withCredentials = true; // 配置为true 请求会携带session
 
 // Add a request interceptor
 myAxios.interceptors.request.use(function (config) {
-    console.log('我要发请求啦', config)
+    console.log('我要发请求啦'+ config)
     // Do something before request is sent
     return config;
 }, function (error) {
@@ -19,10 +19,10 @@ myAxios.interceptors.request.use(function (config) {
     return Promise.reject(error);
 });
 
-// Add a response interceptor
+// Add a response interceptor  todo sz myAxios的response请求拦截器定义，对于没有登录的请求进行拦截操作
 myAxios.interceptors.response.use(function (response) {
-    console.log('我收到你的响应啦', response)
-    // 未登录则跳转到登录页
+    console.log('我收到你的响应啦'+ response)
+    // todo sz※  此处为通过myAxios的相应拦截器，将未登录的请求统一跳转到登录页
     if (response?.data?.code === 40100) {
         const redirectUrl = window.location.href;
         window.location.href = `/user/login?redirect=${redirectUrl}`;
